@@ -8,21 +8,45 @@ layout: default
   {{ content }}
 </div>
 
+
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      {% if post.hidden == true %}
-        {% continue %}
+
+  {% assign maxRelated = 2 %}
+  {% assign minCommonTags = 1 %}
+
+    {% for post in site.posts %}
+
+    {% if post.url == page.url %}
+      {% continue %}
+    {% endif %}
+    {% if post.relatedhide == true %} 
+      {% continue %}
+    {% endif %}
+      {% assign sameTagCount = 0 %}
+      {% assign commonTags = '' %} 
+      {% for cat in post.categories %}
+        {% if page.categories contains cat %}
+          {% assign sameTagCount = sameTagCount | plus : 1 %}
+          {% capture tagmarkup %} <span class="label label-default">
+            {{ cat }}</span>
+          {% endcapture %}
+          {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+      {% endfor %}
+      {% if sameTagCount >= minCommonTags %}
+        {% assign words = commonTags | split: ' ' %}
+        {% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
+        <li>
+            <h3>
+            <a href="{{ post.url }}">
+                {{ post.title }}
+                <small>{{ titlecase }}</small>
+            </a>
+            </h3>
+        </li>
       {% endif %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
     {% endfor %}
   </ul>
 </div>
