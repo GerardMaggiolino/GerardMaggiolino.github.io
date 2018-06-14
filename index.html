@@ -3,8 +3,37 @@ layout: default
 title: Home
 ---
 
+<h1 style="font-size:130%;">Hello World!</h1>
+<p>Welcome to my blog. I'll mostly be documenting topics I've found
+interesting to learn. I also hope to provide a few concise but 
+comprehensive guides on programming languages or other subjects. 
+</p>
+
+<!-- print out all guides -->
+<h1 class="category-title">Comprehensive Guides<p></p></h1>
+<div class="posts">
+  {% for post in site.categories.learning %}
+    {% if post.hidden == true %}
+      {% continue %}
+    {% endif %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+  </div>
+  {% endfor %}
+</div>
+
+
+<!-- all other posts -->
+<h1 class="category-title">Other Material<p></p></h1>
 <div class="posts">
   {% for post in paginator.posts %}
+    {% if post.categories contains 'learning' %}
+      {% continue %}
+    {% endif %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -12,9 +41,10 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <!-- <span class="post-date">{{ post.date | date_to_string }}</span> -->
 
-    {{ post.content }}
+    <!-- Remove Words {{ post.content | strip_html | truncatewords: 50}} -->
+    <!-- {{ post.content }} -->
   </div>
   {% endfor %}
 </div>
