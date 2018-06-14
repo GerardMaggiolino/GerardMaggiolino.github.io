@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About
+layout: post
+title: Coming Soon
 ---
 
 <p class="message">
