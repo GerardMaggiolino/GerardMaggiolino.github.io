@@ -4,11 +4,16 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
+		<div class="sidebar-item">
+			<h1>
+				<a href="/">
+					{{ site.title }}
+				</a>
+			</h1>
+			<p>{{ site.description }}</p>
+		</div>
 
-  <nav class="sidebar-nav">
+  <nav class="sidebar-nav">	
     <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
 
     {% comment %}
