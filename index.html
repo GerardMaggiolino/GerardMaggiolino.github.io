@@ -9,23 +9,20 @@ interesting to learn. I also hope to provide a few concise but
 comprehensive guides on programming languages and other subjects. 
 </p>
 
-[link]({{ site.baseurl }}{% link _posts/2018-06-13-c-as-second-language.md %})
 
-<!-- print out all guides -->
+<!-- all guides -->
 <h1 class="category-title">Comprehensive Guides<p></p></h1>
 <div class="posts">
-  {% for post in site.categories.learning %}
-    {% if post.hidden == true %}
-      {% continue %}
-    {% endif %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
+      <!-- guide titles and links -->
+      <a href="{{ site.baseurl }}
+          {% link _posts/2018-06-13-c-as-second-language.md%}">
+          C as a Second Language
       </a>
+
     </h1>
   </div>
-  {% endfor %}
 </div>
 
 
