@@ -55,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 .category-title {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   color: #7BA588; 
-  text-indent: 15%;
 }
 
 /*
@@ -389,7 +388,7 @@ a.pagination-item:hover {
   }
   .pagination-item {
     float: left;
-    width: 50%;
+    width: 30%;
   }
   .pagination-item:first-child {
     margin-bottom: 0;

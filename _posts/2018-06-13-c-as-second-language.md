@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning C as a Second Language
-categories: learning c
+categories: learning c programming
 # won't show up in other articles related
 relatedhide: true
 ---
