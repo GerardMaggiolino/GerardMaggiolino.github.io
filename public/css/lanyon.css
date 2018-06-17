@@ -54,7 +54,11 @@ h1, h2, h3, h4, h5, h6 {
 /* CUSTOM DEFINED CLASSES */ 
 .category-title {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  color: #7BA588; 
+  color: black; 
+}
+.head1 {
+  font-size:120%; 
+  color: black;
 }
 
 /*
