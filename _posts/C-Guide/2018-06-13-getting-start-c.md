@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Getting Started
+title: "C: Getting Started"
 categories: programming learning c
+# won't show up in other articles related, doesn't display related
+hidden: true
 ---
 
 <p class="message">
@@ -20,13 +22,13 @@ windows
 
 <div class="pagination">
     <a class="pagination-item older" href="{{ site.baseurl }}
-    {% link _posts/2018-06-13-preface-and-history-c.md %}">Previous Article</a>
+    {% link _posts/C-Guide/2018-06-13-preface-and-history-c.md %}">Previous Article</a>
 
     <a class="pagination-item" href="{{ site.baseurl }}
-    {% link _posts/2018-06-13-c-as-second-language.md %}">Guide</a>
+    {% link _posts/C-Guide/2018-06-13-c-as-second-language.md %}">Guide</a>
 
     <a class="pagination-item newer" href="{{ site.baseurl }}
-    {% link _posts/2018-06-13-variables-string-control-flow-c.md %}">Next Article</a>
+    {% link _posts/C-Guide/2018-06-13-variables-string-control-flow-c.md %}">Next Article</a>
 
 </div>
 

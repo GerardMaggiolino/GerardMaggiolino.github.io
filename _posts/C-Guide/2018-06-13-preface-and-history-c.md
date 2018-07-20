@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Preface and History
+title: "C: Preface and History"
 categories: learning programming c 
+hidden: true
 ---
 
 <p class="head1"><b>Goal and Target audience</b></p>
@@ -26,10 +27,10 @@ different standards for compilers (K&R, C90, C99, C11)
     <span class="pagination-item older">Previous Article</span> 
 
     <a class="pagination-item" href="{{ site.baseurl }}
-    {% link _posts/2018-06-13-c-as-second-language.md %}">Guide</a>
+    {% link _posts/C-Guide/2018-06-13-c-as-second-language.md %}">Guide</a>
 
     <a class="pagination-item newer" href="{{ site.baseurl }}
-    {% link _posts/2018-06-13-getting-start-c.md %}">Next Article</a>
+    {% link _posts/C-Guide/2018-06-13-getting-start-c.md %}">Next Article</a>
 
 </div>
 
