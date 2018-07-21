@@ -174,8 +174,8 @@ hex(id(bar))                # 0x1049a0140
 foo = 300
 hex(id(foo))                # 0x104c16f70{% endhighlight %}
 
-These optimizations are not guaranteed, particularly for larger integers. As
-expected, all objects are placed on a 
+These optimizations are not guaranteed, particularly for larger integers and complex objects.
+As expected, all objects are placed on a 
 <a href="https://docs.python.org/3/c-api/memory.html" target="_blank">private heap</a>,
 and garbage collection of unreferenced objects is automatic. Size of
 objects may vary based on implementation, but integers are often at least 28

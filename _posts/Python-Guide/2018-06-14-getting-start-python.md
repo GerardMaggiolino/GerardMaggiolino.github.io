@@ -3,15 +3,13 @@ layout: post
 title: "Python: Getting Started"
 categories: programming learning python
 ---
-
 <p>
     This guide is designed for programmers with prior language knowledge to rapidly
 develop skills in Python. Early articles are meant to port over existing 
-knowledge into Python syntax, without programming exercises. Deeper specifications of
-the language will be covered along the way, with links to additional resources covering
-material outside of the scope of this tutorial. Familiarity with C, C++, or Java
-is expected. 
-</p>
+knowledge into Python syntax, without programming exercises. Deeper specifications 
+of the language will be covered along the way, with links to additional 
+resources covering material outside of the scope of this tutorial. Familiarity 
+with C, C++, Java, or similar languages is expected.</p>
 
 <p>
 This 

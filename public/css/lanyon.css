@@ -56,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   color: black; 
 }
+.section {
+    font-size:1.75rem;
+    color:rgb(59, 116, 161);
+}
 .head1 {
   font-size:120%; 
   color: black;
