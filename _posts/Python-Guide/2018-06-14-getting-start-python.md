@@ -9,8 +9,8 @@ categories: programming learning python
 develop skills in Python. Early articles are meant to port over existing 
 knowledge into Python syntax, without programming exercises. Deeper specifications of
 the language will be covered along the way, with links to additional resources covering
-material outside of the scope of this tutorial. Familiarity with C, C++, or Java
-is expected. 
+material outside of the scope of this tutorial. Familiarity with C, C++, Java, or 
+similar languages is expected. 
 </p>
 
 <p>
