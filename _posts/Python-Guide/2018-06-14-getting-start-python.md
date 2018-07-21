@@ -6,10 +6,18 @@ categories: programming learning python
 <p>
     This guide is designed for programmers with prior language knowledge to rapidly
 develop skills in Python. Early articles are meant to port over existing 
+<<<<<<< HEAD
 knowledge into Python syntax, without programming exercises. Deeper specifications 
 of the language will be covered along the way, with links to additional 
 resources covering material outside of the scope of this tutorial. Familiarity 
 with C, C++, Java, or similar languages is expected.</p>
+=======
+knowledge into Python syntax, without programming exercises. Deeper specifications of
+the language will be covered along the way, with links to additional resources covering
+material outside of the scope of this tutorial. Familiarity with C, C++, Java, or 
+similar languages is expected. 
+</p>
+>>>>>>> 1ebc5e7dec539d8004882faa242923392f74e3cc
 
 <p>
 This 
