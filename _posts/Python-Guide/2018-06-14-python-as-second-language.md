@@ -8,7 +8,7 @@ relatedhide: true
 
 <p>
 A moderately comprehensive, no nonsense guide to programming in Python for
-proficient coders.
+those already proficient in other languages.
 Head to the 
 <a href="{{ site.baseurl }} 
 {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">preface</a>
@@ -27,7 +27,7 @@ for more information and to get started.
     <P></P></a>
     <a href="{{ site.baseurl }}
         {% link _posts/Python-Guide/2018-06-14-basic-types-python.md %}">
-        2. Basic Types and Operations
+        2. Basic Types, Syntax, and Operations
     <P></P></a>
 
 

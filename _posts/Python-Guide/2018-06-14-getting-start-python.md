@@ -8,7 +8,7 @@ categories: programming learning python
     This guide is designed for programmers with prior language knowledge to rapidly
 develop skills in Python. Early articles are meant to port over existing 
 knowledge into Python syntax, without programming exercises. Deeper specifications of
-the language will be covered along the way, with links to resources covering
+the language will be covered along the way, with links to additional resources covering
 material outside of the scope of this tutorial. Familiarity with C, C++, or Java
 is expected. 
 </p>
@@ -30,12 +30,13 @@ interpreter. Recent releases can be installed directly from
 
 <p>
 Python is an interpreted
-language. In essence, written source code is ran on a
-secondary program which executes the instructions. The most common interpreter,
-CPython, is written in C; this virtual machine will execute Python 
+language. Written source code is ran on a
+secondary program which executes the instructions. The most common, reference
+interpreter is
+<a href="https://docs.python-guide.org/starting/which-python/#implementations"
+target="_blank">CPython</a>. This virtual machine will execute Python 
 <a href="https://opensource.com/article/18/4/introduction-python-bytecode"
-target="_blank">bytecode</a>
-which is generated prior to runtime from source code. From the users end, this
+target="_blank">bytecode</a>, generated prior to runtime from source code. From the users end, this
 is a one step process. Invoking the Python interpreter will allow the same
 source code to run platform independently. These tutorials will assume Python is
 being ran from the command line, although many powerful
@@ -93,7 +94,11 @@ chmod a+x HelloWorld.py
 
 <p>
 Now that you're able to run Python code and have an abstract sense of the
-language, it's time to start learning!
+language, it's time to start learning! Keep in mind that concepts which have not
+yet been formally covered may be used to demonstrate other features of Python. Do
+your best to infer its use for the time being; for example, the print() function
+will print text to standard output. Any code shown will execute
+properly unless otherwise noted.  
 </p>
 <div class="pagination">
 

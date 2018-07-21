@@ -1,5 +1,2 @@
-x = 5
-x = "hi"
-print(x)
-x = 10
+x = 0b10.10
 print(x)
