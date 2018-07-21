@@ -7,8 +7,8 @@ relatedhide: true
 ---
 
 <p>
-A moderately comprehensive, no nonsense syntax based guide to programming in
-Python. 
+A moderately comprehensive, no nonsense guide to programming in Python for
+proficient coders.
 Head to the 
 <a href="{{ site.baseurl }} 
 {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">preface</a>
@@ -25,6 +25,11 @@ for more information and to get started.
         {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">
         1. Preface and Getting Started
     <P></P></a>
+    <a href="{{ site.baseurl }}
+        {% link _posts/Python-Guide/2018-06-14-basic-types-python.md %}">
+        2. Basic Types and Operations
+    <P></P></a>
+
 
     </h1>
   </div>

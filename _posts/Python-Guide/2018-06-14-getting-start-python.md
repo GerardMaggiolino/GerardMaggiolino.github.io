@@ -4,17 +4,13 @@ title: "Python: Getting Started"
 categories: programming learning python
 ---
 
-<p class="message">
-    Under development. This post will contain information to make sure you're
-    set up to start programming in Python!
-</p>
-
 <p>
     This guide is designed for programmers with prior language knowledge to rapidly
 develop skills in Python. Early articles are meant to port over existing 
 knowledge into Python syntax, without programming exercises. Deeper specifications of
 the language will be covered along the way, with links to resources covering
-material outside of the scope of this tutorial. 
+material outside of the scope of this tutorial. Familiarity with C, C++, or Java
+is expected. 
 </p>
 
 <p>
@@ -61,14 +57,43 @@ errors.
 Simply running "python" from the command line will open an interactive 
 shell-like environment reading from standard input. Specifying a file name will
 sequentially execute a script from that file. Appending the following to the top
-of a script
+of a file
   {% highlight python %}
-"#!/usr/local/bin/python3"
-  {% endhighlight %}
+#!/usr/local/bin/python3{% endhighlight %}
 with substitution of the correct path to the interpreter of choice allows for
 the script to be ran directly when given 
 <a href="https://www.computerhope.com/unix/uchmod.htm" target="_blank">execution</a>
 permissions. 
+</p>
+
+<p>
+Ensure that you've installed and are able to run Python
+scripts. First, run Python from the command line (it may be helpful to 
+<a href="https://jonsuh.com/blog/bash-command-line-shortcuts/"
+target="_blank">alias</a>
+python3 to python).
+{% highlight bash %}
+python
+>>> print("Hello, World!")
+Hello World!
+>>> Ctrl-D{% endhighlight %}
+Then, create a file "HelloWorld.py", specifying the correct path to your
+interpreter. 
+{% highlight python %}
+#!/usr/local/bin/python3
+print("Hello World!"){% endhighlight %}
+You can run the file from the command line using either 
+{% highlight bash %}
+python HelloWorld.py{% endhighlight %}
+or by setting execution permissions for the file and running it directly. 
+{% highlight bash %}
+chmod a+x HelloWorld.py
+./HelloWorld.py{% endhighlight %}
+</p>
+
+<p>
+Now that you're able to run Python code and have an abstract sense of the
+language, it's time to start learning!
 </p>
 <div class="pagination">
 
@@ -77,7 +102,10 @@ permissions.
     <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-python-as-second-language.md %}">Guide</a>
 
-    <span class="pagination-item newer">Next Article</span>
+    <a class="pagination-item newer" href="{{ site.baseurl }}
+    {% link _posts/Python-Guide/2018-06-14-basic-types-python.md %}">Next
+    Article</a>
+
 
 </div>
 
