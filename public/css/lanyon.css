@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CUSTOM DEFINED CLASSES */ 
 .section {
-    font-size:1.75rem;
+    font-size:1.65rem;
     color:rgb(59, 116, 161);
 }
 .head1 {
@@ -86,12 +86,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 38rem) {
   .container {
-    max-width: 32rem;
+    max-width: 33rem;
   }
 }
 @media (min-width: 56rem) {
   .container {
-    max-width: 38rem;
+    max-width: 40rem;
   }
 }
 

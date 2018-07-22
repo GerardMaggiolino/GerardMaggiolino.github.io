@@ -54,7 +54,7 @@ html {
 }
 @media (min-width: 608px) {
   html {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -194,7 +194,7 @@ pre code {
   white-space: pre; 
 }
 .highlight pre code * {
-  white-space: nowrap;
+  white-space: pre;
 }
 
 /* Quotes */

@@ -3,9 +3,8 @@ layout: post
 title: "Python: Basic Types, Syntax, and Operations"
 categories: programming learning python
 ---
-<p class="message">
-    Page under development. 
-</p>
+
+<p class="section" id="structure">Structure</p>
 
 <p>
 As mentioned earlier, Python delimits code struture with whitespace. Statements
@@ -44,6 +43,9 @@ n = (x + y + z) * \
     y + z{% endhighlight %} 
 </p>
 
+
+<p class="section" id="types">Types and Objects</p>
+
 <p>
 Python is a 
 <a
@@ -58,34 +60,34 @@ objects, rather than
 to variable names (dynamic typing). However, operations on unrelated
 types aren't permitted without explicit casting (strong typing). 
 {% highlight python %}
-my_var = 5                  # Assigning an integer to my_var
-my_var = "Five"             # Reassigning my_var to a string
+my_var = 5              # Assigning an integer to my_var
+my_var = "Five"         # Reassigning my_var to a string
 
 other_var = 10 
 print(my_var + other_var)   # Error thrown! Unrelated types {% endhighlight %}
 </p>
 
+
 <p>
-The related types of integers and floating point numbers may be operated on with
+Integers and floating point numbers may be operated on with
 standard arithmetic operators. There are no distinctions between longs and ints,
 and ints are 
 <a
 href="https://www.geeksforgeeks.org/what-is-maximum-possible-value-of-an-integer-in-python/"
 target="_blank">unbounded</a> in maximum value, restricted only by available memory.
 {% highlight python %}
-x = 3.0                     # Assigning a floating point
-y = 10                      # Assigning an integer
+x = 3.0             # Assigning a floating point
+y = 10              # Assigning an integer
 
-z = x + y                   # Addition, z = 13.0
-z = x - y                   # Subtraction, z = -7.0 
-z = x * y                   # Multiplication, z = 30.0
-z = y % 3                   # Modulus, z = 1
+z = x + y           # Addition, z = 13.0
+z = x - y           # Subtraction, z = -7.0 
+z = x * y           # Multiplication, z = 30.0
+z = y % 3           # Modulus, z = 1
 
-z = y / 3                   # Floating point division, z = 
-                            #   3.33333333 ... 
-z = y // 3                  # Truncated division, z = 3
-z = y // 3.0                # Truncated division, z = 3.0
-z = y ** x                  # Exponentiation, z = 1000.0{% endhighlight %}
+z = y / 3           # Standard division, z = 3.333 ... 
+z = y // 3          # Truncated division, z = 3
+z = y // 3.0        # Truncated division, z = 3.0
+z = y ** x          # Exponentiation, z = 1000.0{% endhighlight %}
 Notice that operations between floating points and integers return
 floating points, even in the case of truncated division. Integer division done
 with the '/' operator will also return floating points. The '//' operator must be used
@@ -93,24 +95,26 @@ between two integers to return an integer. Operations follow standard arithmetic
 precedence, with parenthesis binding lower precedence operators. 
 </p>
 
+
 <p>
 Floating points, integers, and bools may be converted between one
 another using type conversion functions. Bools are assigned values of
 upper-cased True or False. 
 {% highlight python %}
 my_bool = True
-x = int(my_bool)            # x = 1
+x = int(my_bool)    # x = 1
 
 my_bool = False
-y = float(my_bool)          # y = 0.0
+y = float(my_bool)  # y = 0.0
 
 x = 100
-my_bool = bool(x)           # my_bool = True
-my_bool = bool(y)           # my_bool = False{% endhighlight %}
+my_bool = bool(x)   # my_bool = True
+my_bool = bool(y)   # my_bool = False{% endhighlight %}
 </p>
 
+
 <p>
-Singular types of byte, char, short, and long are unified under integer types. Float
+Singular types of byte, short, and long are unified under integer types. Float
 and double are unified under floating point types. Null is roughly equivalent to
 upper-cased 
 <a href="https://www.pythoncentral.io/python-null-equivalent-none/"
@@ -121,40 +125,42 @@ type()</a>
 may be used to return the type of an object. 
 {% highlight python %}
 bar = 5 
-type(bar)                   # <class 'int'>
+type(bar)           # <class 'int'>
 
 bar = 5.
-type(bar)                   # <class 'float'>
+type(bar)           # <class 'float'>
 
 bar = True
-type(bar)                   # <class 'bool'>
+type(bar)           # <class 'bool'>
 
 bar = None
-type(bar)                   # <class 'NoneType'>{% endhighlight %}
+type(bar)           # <class 'NoneType'>{% endhighlight %}
 </p>
+
 
 <p>
 The built in function 
 <a href="https://docs.python.org/3/library/functions.html#id" target="_blank">
 id()</a> returns the memory address of an object (for CPython). This can be used
 to demonstrate immutability and referencing. The covered types of
-bool, int, and float are immutable, and reassignment of variable names create
+bool, int, and float are immutable, and reassignment of variable names creates
 new objects. Try the following on your terminal; memory addresses will vary.
 {% highlight python %}
-foo = 5                     # new int object created
-id(foo)                     # 4372930720 
+foo = 5             # new int object created
+id(foo)             # 4372930720 
 
-foo = 10                    # new int object created
-id(foo)                     # 4372930880
+foo = 10            # new int object created
+id(foo)             # 4372930880
 
-foo = True                  # new bool object created
-id(foo)                     # 4372526608{% endhighlight %}
+foo = True          # new bool object created
+id(foo)             # 4372526608{% endhighlight %}
 
 
-The above comments of object creation are not precisely true - integers in the
-range of [-5, 256] are cached, along with bool objects. The variable name
-of foo can be thought to be reassigned to existing objects. 
+The comments of object creation are not precisely true - integers in the
+range of [-5, 256] are cached, along with bool objects. For the above example,
+the variable name of foo can be thought to be reassigned to existing objects.
 </p>
+
 
 <p>
 The built in 
@@ -167,12 +173,12 @@ foo = 10
 bar = 10
 
 # These variables refer to the same object
-hex(id(foo))                # 0x1049a0140
-hex(id(bar))                # 0x1049a0140
+hex(id(foo))        # 0x1049a0140
+hex(id(bar))        # 0x1049a0140
 
-# foo refers to newly created int object
 foo = 300
-hex(id(foo))                # 0x104c16f70{% endhighlight %}
+# foo refers to newly created int object
+hex(id(foo))        # 0x104c16f70{% endhighlight %}
 
 These optimizations are not guaranteed, particularly for larger integers and complex objects.
 As expected, all objects are placed on a 
@@ -180,9 +186,109 @@ As expected, all objects are placed on a
 and garbage collection of unreferenced objects is automatic. Size of
 objects may vary based on implementation, but integers are often at least 28
 bytes, far larger than most other language's 4 or 8 bytes. This reflects that
-they are complete objects with many attributes. 
+they are complete objects with various attributes. 
 </p>
 
+
+<p>
+String types have a variety of 
+<a href="https://docs.python.org/3/library/stdtypes.html#string-methods"
+target="_blank">methods</a> (member functions). Variables can be assigned using
+single, double, or triple quoted strings. There is no difference between single
+and double quotes. Triple quotes preserve whitespace, including newlines.
+Standard escapes apply with '\'. Type conversion is done with the str()
+function.
+{% highlight python %}
+# Single quoted string, double quote internally without escape
+string1 = 'That\'s when he said, "Hello, World!"'
+
+# Double quoted string, single quote internally without escape
+string2 = "That's when he said, \"Hello, World!\""
+
+string1 == string2  # True
+
+# String interpreted with newlines and tabs
+string3 = """\                      
+    This is a string spanning multiple
+    lines! Newlines that aren't escaped
+    are preserved.\   
+    """
+
+# Type conversion for strings 
+x = 5               # x is an int type 
+string4 = str(x)   
+type(string4)       # <class 'str'>
+{% endhighlight %} 
+
+Strings are concatenated with '+' and repeated with '*'. There is no singular
+char type; strings of length 1 are extracted with '[]'. Negative indices
+correspond to the last character. Length of strings is returned from the 
+<a href="https://docs.python.org/3/library/functions.html#len"
+target="_blank">len()</a>
+function. Strings are immutable. Characters at indices cannot be reassigned. 
+{% highlight python %}
+s1 = "Learning!"
+
+s2 = s1[0]          # s2 = "L"
+s2 = s1[-1]         # s2 = "!"
+s2 = s1[-3]         # s2 = "n"
+s2 = s2 * 5         # s2 = "!!!!!"
+s2 = s1 + s1        # s2 = "Learning!Learning!"
+
+s1_length = len(s1) # s1_length = 9
+
+s1[0] = "B"         # Error thrown! Strings are immutable
+{% endhighlight %}
+</p>
+
+<p>
+Slicing is accomplished with '[<i>start</i> : <i>end</i> : <i>step</i>]', and
+returns substrings. Indices are inclusive-exclusive of start-end, as
+[<i>start</i>, <i>end</i>). Empty start or end is inferred as beginning or
+end of string. Negative step allows for backwards iteration, beginning at start
+index; omitting step infers step of 1. 
+
+{% highlight python %}
+s1 = "UCSD2020"
+
+s2 = s1[0:]         # s2 = "UCSD2020"
+s2 = s1[:-1]        # s2 = "UCSD202"
+s2 = s1[1:-2]       # s2 = "CSD20"
+
+s2 = s1[::-1]       # s2 = "0202DSCU"
+s2 = s1[3::-1]      # s2 = "DSCU"
+s2 = s1[1:8:2]      # s2 = "CD00"
+{% endhighlight %}
+</p>
+
+
+<p>
+Source code, including its strings and identifiers, is parsed in 
+<a href="https://docs.python.org/3/howto/unicode.html" target="_blank">UTF-8</a>
+by default. Strings are 
+<a href="https://www.python.org/dev/peps/pep-0393/" target="_blank">internally
+represented</a>
+in bare Unicode. Strings
+containing only ASCII or Latin-1 characters use 1 byte for all characters. Strings
+containing any higher code point characters use 2 (UCS-2) or 4 (UCS-4) bytes for all characters,
+depending on the value of the highest code point. Base size of strings vary
+dependent on the internal representation. 
+
+{% highlight python %}
+# Precise size may vary based on interpreter version
+s1 = ""         # 49 bytes 
+s1 = "aa"       # 51 bytes, 1 per char
+
+# Latin-1 containing string has larger base size
+s2 = "À"        # 74 bytes
+s2 = "Àa"       # 75 bytes, 1 per char
+
+# String containing code point >255
+s3 = "ƻ"        # 76 bytes
+s3 = "ƻa"       # 78 bytes, 2 per char (UCS-2)
+{% endhighlight %}
+
+</p>
 <div class="pagination">
 
     <a class="pagination-item" href="{{ site.baseurl }}
