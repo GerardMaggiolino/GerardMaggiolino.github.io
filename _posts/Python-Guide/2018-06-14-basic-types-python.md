@@ -185,13 +185,13 @@ they are complete objects with many attributes.
 
 <div class="pagination">
 
-    <a class="pagination-item older" href="{{ site.baseurl }}
+    <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">Previous Article</a>
 
     <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-python-as-second-language.md %}">Guide</a>
 
-    <span class="pagination-item newer">Next Article</span>
+    <span class="pagination-item">Next Article</span>
 
 </div>
 
