@@ -6,18 +6,11 @@ categories: programming learning python
 <p>
     This guide is designed for programmers with prior language knowledge to rapidly
 develop skills in Python. Early articles are meant to port over existing 
-<<<<<<< HEAD
 knowledge into Python syntax, without programming exercises. Deeper specifications 
 of the language will be covered along the way, with links to additional 
 resources covering material outside of the scope of this tutorial. Familiarity 
-with C, C++, Java, or similar languages is expected.</p>
-=======
-knowledge into Python syntax, without programming exercises. Deeper specifications of
-the language will be covered along the way, with links to additional resources covering
-material outside of the scope of this tutorial. Familiarity with C, C++, Java, or 
-similar languages is expected. 
+with C, C++, Java, or similar languages is expected.
 </p>
->>>>>>> 1ebc5e7dec539d8004882faa242923392f74e3cc
 
 <p>
 This 
@@ -36,7 +29,7 @@ interpreter. Recent releases can be installed directly from
 
 <p>
 Python is an interpreted
-language. Written source code is ran on a
+language. Written source code is run on a
 secondary program which executes the instructions. The most common, reference
 interpreter is
 <a href="https://docs.python-guide.org/starting/which-python/#implementations"
@@ -45,7 +38,7 @@ target="_blank">CPython</a>. This virtual machine will execute Python
 target="_blank">bytecode</a>, generated prior to runtime from source code. From the users end, this
 is a one step process. Invoking the Python interpreter will allow the same
 source code to run platform independently. These tutorials will assume Python is
-being ran from the command line, although many powerful
+being run from the command line, although many powerful
 <a href="https://realpython.com/python-ides-code-editors-guide/" target="_blank">
 IDEs</a>
 compatible with or designed for Python exist. 
@@ -68,7 +61,7 @@ of a file
   {% highlight python %}
 #!/usr/local/bin/python3{% endhighlight %}
 with substitution of the correct path to the interpreter of choice allows for
-the script to be ran directly when given 
+the script to be run directly when given 
 <a href="https://www.computerhope.com/unix/uchmod.htm" target="_blank">execution</a>
 permissions. 
 </p>

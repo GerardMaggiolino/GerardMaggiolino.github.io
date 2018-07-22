@@ -1,2 +1,2 @@
-x = 0b10.10
-print(x)
+x = 5
+print(x.to_bytes(2, "big"))
