@@ -190,12 +190,11 @@ pre code {
   overflow-x: auto;
   margin-bottom: 0;
 }
-.highlight td.code pre {
-    padding: 0;
-    white-space: pre; 
+.highlight pre code { 
+    white-space: pre;
 }
-.highlight > pre {
-    white-space: pre; 
+.highlight pre code * {
+  white-space: pre;
 }
 
 /* Quotes */
