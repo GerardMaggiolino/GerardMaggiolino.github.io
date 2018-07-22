@@ -187,16 +187,18 @@ pre code {
   border-radius: 4px;
 }
 .highlight pre {
-  overflow-x: auto;
   margin-bottom: 0;
+  overflow-x: auto;
 }
-.highlight pre code { 
-    white-space: pre;
+.highlight > pre { 
+    white-space: pre; 
 }
 .highlight pre code * {
   white-space: nowrap;
 }
-
+.highlight pre code { 
+    white-space: pre;
+}
 /* Quotes */
 blockquote {
   padding: .5rem 1rem;
