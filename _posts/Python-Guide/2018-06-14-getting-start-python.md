@@ -80,7 +80,7 @@ Hello World!
 Then, create a file "HelloWorld.py", specifying the correct path to your
 interpreter. 
 {% highlight python %}
-#!/usr/local/bin/python3
+#!/usr/local/bin/python3 #!/usr/local/bin/python3#!/usr/local/bin/python3#!/usr/local/bin/python3
 print("Hello World!"){% endhighlight %}
 You can run the file from the command line using either 
 {% highlight bash %}
@@ -101,14 +101,14 @@ properly unless otherwise noted.
 </p>
 <div class="pagination">
 
-    <span class="pagination-item older">Previous Article</span>
+    <span class="pagination-item older">Previous</span>
 
     <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-python-as-second-language.md %}">Guide</a>
 
     <a class="pagination-item newer" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-basic-types-python.md %}">Next
-    Article</a>
+    </a>
 
 
 </div>

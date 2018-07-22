@@ -292,12 +292,12 @@ s3 = "ƻa"       # 78 bytes, 2 per char (UCS-2)
 <div class="pagination">
 
     <a class="pagination-item" href="{{ site.baseurl }}
-    {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">Previous Article</a>
+    {% link _posts/Python-Guide/2018-06-14-getting-start-python.md %}">Previous</a>
 
     <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-python-as-second-language.md %}">Guide</a>
 
-    <span class="pagination-item">Next Article</span>
+    <span class="pagination-item">Next</span>
 
 </div>
 

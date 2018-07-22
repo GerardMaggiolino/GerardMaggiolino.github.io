@@ -193,6 +193,9 @@ pre code {
 .highlight pre code {
   white-space: pre; 
 }
+.highlight > pre {
+    white-space: pre; 
+}
 .highlight pre code * {
   white-space: pre;
 }
