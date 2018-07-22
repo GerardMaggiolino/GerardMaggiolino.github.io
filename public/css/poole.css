@@ -187,7 +187,11 @@ pre code {
   border-radius: 4px;
 }
 .highlight pre {
+  word-wrap: normal;
   margin-bottom: 0;
+}
+.highlight pre code {
+  white-space: pre; 
 }
 
 /* Quotes */

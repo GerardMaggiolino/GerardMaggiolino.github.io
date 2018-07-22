@@ -11,9 +11,8 @@ comprehensive guides on programming languages and other subjects.
 
 
 <!-- all guides -->
-<h2 class="post-title">Comprehensive Guides<p></p></h2>
-<div class="posts">
-  <div class="post">
+<h2 class="post-title">Comprehensive Guides</h2>
+<body class="posts">
     <h1 class="post-title">
       <!-- guide titles and links -->
 
@@ -27,13 +26,13 @@ comprehensive guides on programming languages and other subjects.
       </a>
 
     </h1>
-  </div>
-</div>
+</body>
 
 
+<p></p>
 <!-- all other posts -->
-<h2 class="post-title">Other Material<p></p></h2>
-<div class="posts">
+<h2 class="post-title">Other Material</h2>
+<body class="posts">
   {% for post in paginator.posts %}
     {% if post.categories contains 'learning' %}
       {% continue %}
@@ -54,4 +53,4 @@ comprehensive guides on programming languages and other subjects.
     <!-- {{ post.content }} -->
   </div>
   {% endfor %}
-</div>
+</body>
