@@ -80,7 +80,7 @@ Hello World!
 Then, create a file "HelloWorld.py", specifying the correct path to your
 interpreter. 
 {% highlight python %}
-#!/usr/local/bin/python3#!/usr/local/bin/python3#!/usr/local/bin/python3
+#!/usr/local/bin/python3
 print("Hello World!"){% endhighlight %}
 You can run the file from the command line using either 
 {% highlight bash %}

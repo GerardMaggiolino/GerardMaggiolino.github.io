@@ -194,7 +194,7 @@ pre code {
     white-space: pre;
 }
 .highlight pre code * {
-  white-space: pre;
+  white-space: nowrap;
 }
 
 /* Quotes */

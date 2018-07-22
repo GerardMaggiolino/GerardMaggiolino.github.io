@@ -194,7 +194,9 @@ they are complete objects with various attributes.
 String types have a variety of 
 <a href="https://docs.python.org/3/library/stdtypes.html#string-methods"
 target="_blank">methods</a> (member functions). Variables can be assigned using
-single, double, or triple quoted strings. There is no difference between single
+single, double, or 
+<a href="https://developers.google.com/edu/python/strings" target="_blank">triple quoted</a>
+strings. There is no difference between single
 and double quotes. Triple quotes preserve whitespace, including newlines.
 Standard escapes apply with '\'. Type conversion is done with the str()
 function.
@@ -206,13 +208,6 @@ string1 = 'That\'s when he said, "Hello, World!"'
 string2 = "That's when he said, \"Hello, World!\""
 
 string1 == string2  # True
-
-# String interpreted with newlines and tabs
-string3 = """\                      
-    This is a string spanning multiple
-    lines! Newlines that aren't escaped
-    are preserved.\   
-    """
 
 # Type conversion for strings 
 x = 5               # x is an int type 
