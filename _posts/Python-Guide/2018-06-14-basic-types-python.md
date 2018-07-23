@@ -4,7 +4,7 @@ title: "Python: Basic Types, Syntax, and Operations"
 categories: programming learning python
 ---
 
-<p class="section" id="structure">Structure</p>
+<div class="section" id="structure">Structure</div>
 
 <p>
 As mentioned earlier, Python delimits code struture with whitespace. Statements
@@ -44,7 +44,7 @@ n = (x + y + z) * \
 </p>
 
 
-<p class="section" id="types">Types and Objects</p>
+<div class="section" id="types">Types and Objects</div>
 
 <p>
 Python is a 
