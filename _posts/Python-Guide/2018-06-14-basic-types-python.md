@@ -282,8 +282,23 @@ s2 = "Àa"       # 75 bytes, 1 per char
 s3 = "ƻ"        # 76 bytes
 s3 = "ƻa"       # 78 bytes, 2 per char (UCS-2)
 {% endhighlight %}
-
 </p>
+
+
+<p>
+Short strings may be dynamically 
+<a
+href="https://www.codementor.io/satwikkansal/do-you-really-think-you-know-strings-in-python-fnxh8mtha"
+target="_blank">interned</a>, where a singular string object is referenced for
+variables assigned to the same string literal. 
+<a
+href="https://www.codementor.io/mjpieters/python-optimization-how-it-can-make-you-a-better-programmer-ajiiftqbo"
+target="_blank">Constants</a>
+may be created for strings and other data types
+during bytecode generation. It is not possible to explicitly declare a variable
+as constant. 
+</p>
+
 <div class="pagination">
 
     <a class="pagination-item" href="{{ site.baseurl }}
@@ -292,7 +307,8 @@ s3 = "ƻa"       # 78 bytes, 2 per char (UCS-2)
     <a class="pagination-item" href="{{ site.baseurl }}
     {% link _posts/Python-Guide/2018-06-14-python-as-second-language.md %}">Guide</a>
 
-    <span class="pagination-item">Next</span>
+    <a class="pagination-item" href="{{ site.baseurl }}
+    {% link _posts/Python-Guide/2018-06-14-data-structures-python.md %}">Next</a>
 
 </div>
 

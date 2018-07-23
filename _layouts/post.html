@@ -18,6 +18,8 @@ layout: default
   {% assign minCommonTags = 1 %}
 
     {% for post in site.posts %}
+
+    <!-- filters -->
     {% if post.hidden %}
         {% continue %}
     {% endif %}
@@ -27,6 +29,12 @@ layout: default
     {% if post.relatedhide == true %} 
       {% continue %}
     {% endif %}
+    {% if page.categories contains "learning" %}
+      {% if post.categories contains "learning" %}
+        {% continue %}
+      {% endif %}
+    {% endif %}
+
       {% assign sameTagCount = 0 %}
       {% assign commonTags = '' %} 
       {% for cat in post.categories %}

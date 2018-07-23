@@ -29,6 +29,10 @@ for more information and to get started.
         {% link _posts/Python-Guide/2018-06-14-basic-types-python.md %}">
         2. Basic Types, Syntax, and Operations
     <P></P></a>
+    <a href="{{ site.baseurl }}
+        {% link _posts/Python-Guide/2018-06-14-data-structures-python.md %}">
+        3. Data Structures
+    <P></P></a>
 
 
     </h1>
