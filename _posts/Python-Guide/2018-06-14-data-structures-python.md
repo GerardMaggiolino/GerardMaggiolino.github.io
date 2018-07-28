@@ -15,7 +15,7 @@ structures are not available. Structures cannot be bound to single types.
 
 
 <p>
-Tuples are declared with '()'. Non-empty tuples can be declared without
+Tuples are ordered collections of objects declared with '()'. Non-empty tuples can be declared without
 parenthesis, with commas separating elements; this is called 
 <a href="http://www.schoolcoders.com/coding-pythonbeginners-tuples-2"
 target="_blank">packing</a>. 
@@ -97,11 +97,12 @@ num2                    # 1
 {% endhighlight %}
 
 Frozenset is identical to set, but restricted to methods which do not
-mutate the frozenset. Sets will be covered in the next section. 
+mutate the structure. Sets will be covered in the next section. 
 </p>
 
 
 <div class="section" id="mutable">Mutable Data Structures</div>
+Lists are ordered collections of objects declared with '[]'. 
 <p>
 
 </p>

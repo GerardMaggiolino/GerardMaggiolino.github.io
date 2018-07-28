@@ -22,4 +22,6 @@ version:		1.0.0
 github:
   repo:			https://github.com/GerardMaggiolino/
 
-plugins:		[jekyll-paginate]
+plugins:		
+    - jekyll-paginate
+    - jekyll-seo-tag

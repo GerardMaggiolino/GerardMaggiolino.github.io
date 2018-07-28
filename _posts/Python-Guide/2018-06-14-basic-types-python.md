@@ -213,6 +213,7 @@ string1 == string2  # True
 x = 5               # x is an int type 
 string4 = str(x)   
 type(string4)       # <class 'str'>
+string4             # '5'
 {% endhighlight %} 
 
 Strings are concatenated with '+' and repeated with '*'. There is no singular
@@ -256,6 +257,36 @@ s2 = s1[1:8:2]      # s2 = "CD00"
 {% endhighlight %}
 </p>
 
+<p>
+The following are 
+<a href="https://docs.python.org/3/library/stdtypes.html#string-methods"
+target="_blank">methods</a> 
+called on string variables. Method split() breaks a string into substrings
+across a passed delimiter, defaulting to whitespace. Substrings are stored in a
+list, a data structure covered in the following section. Methods
+upper() and lower() return upper- or lower-cased strings. New strings are
+returned and must be assigned due to string immutability. Some bool returning
+methods are isalnum() for alphanumeric characters, isalpha() for alphabetic
+characters, islower() for lower-case, isupper() for upper-case, and isspace()
+for whitespace only. 
+{% highlight python %}
+s1 = "Thus, we conclude, henceforth, this sentence is long."
+list = s1.split(",")
+list
+# ['Thus', ' we conclude', ' henceforth', ' this sentence is long.']
+
+s2 = "Shorter String"
+
+down_s2 = string2.lower()       # down_s2 ='shorter string'
+up_s2 = string2.upper()         # up_s2 = 'SHORTER STRING'
+
+up_s2.isalpha()                 # True
+up_s2.islower()                 # False
+down_s2.islower()               # True
+s2.isspace()                    # False
+" ".isspace()                   # True
+{% endhighlight %} 
+</p>
 
 <p>
 Source code, including its strings and identifiers, is parsed in 
