@@ -6,6 +6,13 @@ categories: learning python programming
 relatedhide: true
 ---
 
+<meta name="description" content="A moderately comprehensive, 
+no nonsense guide to programming in Python for
+those already proficient in other languages.">
+<meta name ="keywords" content="programming, second language, python, learning, 
+computer science, experienced, programmer">
+
+
 <p>
 A moderately comprehensive, no nonsense guide to programming in Python for
 those already proficient in other languages.

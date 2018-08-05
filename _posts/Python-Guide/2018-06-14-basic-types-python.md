@@ -121,7 +121,7 @@ upper-cased
 target="_blank">None</a>. None is an object of type NoneType rather than a
 value. The built in function of 
 <a href="https://docs.python.org/3/library/functions.html#type" target="_blank">
-type()</a>
+type(<i>object</i>)</a>
 may be used to return the type of an object. 
 {% highlight python %}
 bar = 5 
@@ -141,7 +141,7 @@ type(bar)           # <class 'NoneType'>{% endhighlight %}
 <p>
 The built in function 
 <a href="https://docs.python.org/3/library/functions.html#id" target="_blank">
-id()</a> returns the memory address of an object (for CPython). This can be used
+id(<i>object</i>)</a> returns the memory address of an object (for CPython). This can be used
 to demonstrate immutability and referencing. The covered types of
 bool, int, and float are immutable, and reassignment of variable names creates
 new objects. Try the following on your terminal; memory addresses will vary.
@@ -165,7 +165,7 @@ the variable name of foo can be thought to be reassigned to existing objects.
 <p>
 The built in 
 <a href="https://docs.python.org/3/library/functions.html#hex"
-target="_blank">hex()</a> function will convert an integer to its hexadecimal
+target="_blank">hex(<i>int</i>)</a> function will convert an integer to its hexadecimal
 representation. Notice the following variable names refer to the same object in
 memory. 
 {% highlight python %}
@@ -198,7 +198,8 @@ single, double, or
 <a href="https://developers.google.com/edu/python/strings" target="_blank">triple quoted</a>
 strings. There is no difference between single
 and double quotes. Triple quotes preserve whitespace, including newlines.
-Standard escapes apply with '\'. Type conversion is done with the str()
+Standard escapes apply with '\'. Type conversion is done with the
+str(<i>object</i>)
 function.
 {% highlight python %}
 # Single quoted string, double quote internally without escape
@@ -220,7 +221,7 @@ Strings are concatenated with '+' and repeated with '*'. There is no singular
 char type; strings of length 1 are extracted with '[]'. Negative indices
 correspond to the last character. Length of strings is returned from the 
 <a href="https://docs.python.org/3/library/functions.html#len"
-target="_blank">len()</a>
+target="_blank">len(<i>object</i>)</a>
 function. Strings are immutable. Characters at indices cannot be reassigned. 
 {% highlight python %}
 s1 = "Learning!"
@@ -261,7 +262,7 @@ s2 = s1[1:8:2]      # s2 = "CD00"
 The following are 
 <a href="https://docs.python.org/3/library/stdtypes.html#string-methods"
 target="_blank">methods</a> 
-called on string variables. Method split() breaks a string into substrings
+called on string variables. Method split(<i>delimiter</i>) breaks a string into substrings
 across a passed delimiter, defaulting to whitespace. Substrings are stored in a
 list, a data structure covered in the following section. Methods
 upper() and lower() return upper- or lower-cased strings. New strings are
@@ -325,9 +326,15 @@ variables assigned to the same string literal.
 <a
 href="https://www.codementor.io/mjpieters/python-optimization-how-it-can-make-you-a-better-programmer-ajiiftqbo"
 target="_blank">Constants</a>
-may be created for strings and other data types
-during bytecode generation. It is not possible to explicitly declare a variable
+may be implicitly created for strings and other data types
+during bytecode generation, although it is not possible to explicitly declare a variable
 as constant. 
+</p>
+
+<p>
+While following sections will focus on usage rather than language implementation,
+it should be generally understood that Python has great complexity behind its
+high level interface.  
 </p>
 
 <div class="pagination">
