@@ -1,26 +1,26 @@
 # Dependencies
-markdown:		kramdown
-highlighter:	rouge
+markdown:       kramdown
+highlighter:    rouge
 
 # Permalinks
-permalink:		none
+permalink:      none
 
 # Setup
-title:			Gerard M
-tagline:		'UCSD Math-CS'
+title:          Gerard M
+tagline:        'UCSD Math-CS'
 description:    'UCSD Math-CS'
-url:			GerardMaggiolino.github.io
+url:            GerardMaggiolino.github.io
 
 author:
-  name:			'Gerard Maggiolino'
+  name:	        'Gerard Maggiolino'
 
-paginate:		10
+paginate:       10
 
 # Custom vars
-version:		1.0.0
+version:        1.0.0
 
 github:         
-  repo:			https://github.com/GerardMaggiolino/
+  repo:         https://github.com/GerardMaggiolino/
     
 plugins:		
     - jekyll-paginate

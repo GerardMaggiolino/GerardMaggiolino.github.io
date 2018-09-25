@@ -4,8 +4,7 @@ title: "Python: Data Structures"
 categories: programming learning python
 ---
 
-<p class="message">Page under development.</p>
-<div class="section" id="immutable">Immutable Data Structures</div>
+<div class="section" id="Tuples">Tuples</div>
 
 <p>
 Covered types of bool, string, int, and float are immutable, as are the built in
@@ -107,17 +106,18 @@ mutate the structure. Sets will be covered in the next section.
 </p>
 
 
-<div class="section" id="mutable">Mutable Data Structures</div>
+<div class="section" id="list">Lists</div>
 
 <p>
-Lists are ordered collections of objects declared with '[]'. There is similar
+Lists are mutable ordered collections of objects declared with '[]'. There is similar
 functionality with indexing, slicing, '*', '+', 'in', 
 <a href="https://docs.python.org/3/library/functions.html#sorted"
 target="_blank">sorted(<i>object</i>)</a>, index(<i>object</i>), and count(<i>object</i>). You may notice strings,
 tuples, and lists are handled similarly. These structures are all 
 <a href="https://docs.python.org/3/library/stdtypes.html#typeiter"
 target="_blank">iterable</a>
-sequences, a concept which will be covered later.
+sequences, a concept which will be covered later; in essence, iterables can be
+iterated over to obtain subobjects.  
 {% highlight python %}l1 = ['cat', 'dog']
 
 l2 = l1 + l1
@@ -250,15 +250,118 @@ l1[0] = 100
 outer                   # [[100, 2, 3]]
 clist                   # [[100, 2, 3], 4, 5]
 {% endhighlight %} 
+However, '==' may be used to test deep equality of built-in types. 
+{% highlight python %}
+list1 = [1, 2, 3] 
+list2 = [1, 2, 3] 
+tuple1 = 1, 2, 3, list1
+tuple2 = 1, 2, 3, list2
+dict1 = {'first': tuple1}
+dict2 = {'first': tuple2}
+   
+# All objects at different memory locations
+id(list1) == id(list2)      # False
+id(tuple1) == id(tuple2)    # False
+id(dict2) == id(dict2)      # False
+
+dict1 == dict2              # True
+{% endhighlight %}
 </p>
 
+
+
+<div class="section" id="dictionary">Dictionaries</div>
 
 <p>
 Dictionaries are mutable iterable 
 <a href="https://docs.python.org/3/library/stdtypes.html#typesmapping"
 target="_blank">mappings</a> of immutable hashable keys to arbitrary objects,
-declared with {}. 
+declared with {}, best described as a hash table. The 
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" target="_blank">
+dict()</a> constructor can
+be used to more rapidly and cleanly declare dictionaries with iterables and the
+<a href="https://docs.python.org/3/library/functions.html#zip"
+target="_blank">zip(<i>*iterables</i>)</a> function (note: the * signifies
+variable number of arguments accepted). This returns an iterable zip object where each
+tuple at an index is constructed with each passed iterable's element of the
+same index. A dictionary may take any iterable where elements are iterables
+of two objects; zip aids with constructing such an iterable. 
+{% highlight python %}
+# Standard assignment with key: value syntax
+dict1 = {'one': 1, 'two': 2, 'three': 3}
+
+# Using dict() constructor 
+dict2 = dict([('one', 1), ('two', 2), ('three', 3)])
+
+# Using zip
+iter1 = ['one', 'two', 'three']
+iter2 = (1, 2, 3)
+dict3 = dict(zip(iter1, iter2))
+
+dict1 == dict2 == dict3     # True
+
+# More on zip 
+iter3 = 'abc'
+zipObj = zip(iter1, iter2, iter3)
+
+next(zipObj)                # ('one', 1, 'a')
+next(zipObj)                # ('two', 2, 'b')
+{% endhighlight %}
 </p>
+
+<p>
+Values at a key can be set or reassigned using indexing with []. Retrieval of
+elements with [] raises a KeyError exception (more on exceptions later) if the
+key is not present in the dictionary. Using method get(<i>key</i>) returns the
+associated value or a default value of None if the key is not present; a second 
+argument may be used to set the default value. 
+{% highlight python %}
+grade_book = {'Bob': 'A', 'Sue': 'B', 'Joe': 'C', 'Fred': 'D'}
+
+# Retrieval with brackets
+grade_book['Bob']           # 'A'
+grade_book['Gary']          # KeyError exception thrown! 
+
+# Retrieval with get()
+grade_book.get('Joe')       # 'C'
+grade_book.get('Gary')      # None
+grade_book.get('Gary', 0)   # 0 
+
+# Adding new key value pair, reassigning key
+grade_book['New Guy'] = 'A'
+grade_book['Bob'] = 'C'
+
+grade_book
+# {'Bob': 'C', 'Sue': 'B', 'Joe': 'C', 'Fred': 'D', 'New Guy': 'A'}
+{% endhighlight %}
+
+Dictionaries can be combined with the update(<i>dict</i>) method. Duplicate keys
+from the passed dictionary will replace the key values from the calling
+dictionary. 
+
+{% highlight python %}
+friends_ages = {'Bob': 18, 'Fred': 20}
+new_friends = {'John': 31, 'Fred': 15}
+
+friends_ages.update(new_friends)
+friends_ages
+# {'Bob': 18, 'Fred': 15, 'John': 31} 
+{% endhighlight %}
+
+Items can be deleted with the del statement, specifying the key. The in operator
+is used to check for item membership, again by key. 
+{% highlight python %}
+prices = {"Cheese": 12, "Steak": 15, "Wine": 31}
+
+'Cheese' in prices      # True
+del prices['Cheese']    
+'Cheese' in prices      # False
+{% endhighlight %}
+Keys, values, and key-value pairs (items) can obtained as an iterable view
+object. 
+
+</p>
+
 <div class="pagination">
 
     <a class="pagination-item" href="{{ site.baseurl }}
